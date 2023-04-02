@@ -11,7 +11,8 @@ def account_info():
         info = f.read().split()
         email = info[0]
         password = info[1]
-    return email, password
+        number = info[2]
+    return email, password, number
 
 email, password, number = account_info()
 
