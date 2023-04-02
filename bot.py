@@ -1,4 +1,4 @@
-import time
+from time import sleep
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
@@ -18,7 +18,7 @@ while input_usuario is None:
     try:
         input_usuario = browser.find_element(By.XPATH, '//*[@id="page-container"]/div/div[1]/form/fieldset/div[1]/input')
     except:
-        time.sleep(1)
+        sleep(1)
 
 input_usuario.send_keys('joaodantas_dev')
 button_usuario = browser.find_element(By.XPATH, '//*[@id="page-container"]/div/div[1]/form/div[2]/button')
@@ -30,7 +30,7 @@ while input_senha is None:
     try:
         input_senha = browser.find_element(By.XPATH, '//*[@id="page-container"]/div/div[1]/form/fieldset/div[2]/input')
     except:
-        time.sleep(1)
+        sleep(1)
 
 input_senha.send_keys('iloveganjah98')
 button_senha = browser.find_element(By.XPATH, '//*[@id="page-container"]/div/div[1]/form/div[2]/button')
