@@ -13,7 +13,7 @@ def account_info():
         password = info[1]
     return email, password
 
-email, password = account_info()
+email, password, number = account_info()
 
 tweet = 'Mais um dia sem o Bolsonaro preso.'
 
@@ -40,6 +40,14 @@ input_password.send_keys(password)
 
 button_password = driver.find_element(By.XPATH, '//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div')
 button_password.click()
+
+time.sleep(3)
+
+input_number = driver.find_element(By.XPATH, '//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/label/div/div[2]/div/input')
+input_number.send_keys(number)
+
+input_button = driver.find_element(By.XPATH, '//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div')
+input_button.click()
 
 time.sleep(3)
 
