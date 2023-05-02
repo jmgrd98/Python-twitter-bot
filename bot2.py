@@ -45,7 +45,7 @@ button_password.click()
 time.sleep(3)
 
 
-post_input = driver.find_element(By.CLASS_NAME, 'false draftjs-styles_0')
+post_input = driver.find_element(By.XPATH, '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[1]/div/div[3]/div')
 post_input.click()
 
 time.sleep(30)
